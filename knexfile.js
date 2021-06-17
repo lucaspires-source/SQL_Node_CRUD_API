@@ -7,9 +7,13 @@ module.exports = {
     connection: {
       database: "knex_test",
       username: "postgres",
-      password: "postgres"
+      password: "123456"
+    },
+    migrations:{
+      tableName: "knex_migrations",
+      directory: `${__dirname}/src/database/migrations`
     }
-  },
+  }
 
 
 
