@@ -16,7 +16,12 @@ module.exports = {
 
    async update(req, res,next){
        try {
-
+        const { username } = req.body
+        const {id} = req.params
+            await knex('users')
+            .update({username})
+            .where({id})
+        return res.status(201).send()
        }catch(error){
            next(error)
        }
